@@ -176,7 +176,23 @@ class Solution {
            return false;
     }
 }
-
+class Solution:
+    def isSorted(self, arr) -> bool:
+        if not arr:
+            return True
+            
+            
+            
+        sort=arr[0]
+        
+        for i in arr[1:]:
+            if sort<=i:
+                sort=i
+            else:
+                return False
+        
+        return True
+        
 
 
 
