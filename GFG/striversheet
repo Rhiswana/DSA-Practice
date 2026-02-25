@@ -49,3 +49,62 @@ class Solution {
        
     }
 }
+
+//linear search
+
+class Solution {
+    public int search(int arr[], int x) {
+        // code here
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==x){
+                return i;
+            }
+        }
+    
+        return -1;
+    }
+}
+//union of 2 sorted array
+
+class Solution {
+    
+    public static ArrayList<Integer> findUnion(int a[], int b[]) {
+        // code here
+        ArrayList<Integer> list=new ArrayList<>();
+       HashSet<Integer> set=new HashSet<>();
+       for(int i=0;i<a.length;i++){
+           if(!set.contains(a[i])){
+               set.add(a[i]);
+               list.add(a[i]);
+           }
+       }
+           for(int i=0;i<b.length;i++){
+           if(!set.contains(b[i])){
+               set.add(b[i]);
+               list.add(b[i]);
+           }
+       }
+       
+       Collections.sort(list);
+       return list;
+    }
+}
+//missing no
+
+class Solution {
+    int missingNum(int arr[]) {
+        
+      Arrays.sort(arr);
+      int count =1;
+      for(int i=0;i<arr.length;i++){
+          if(arr[i]==count){
+              count++;
+          }
+          else{
+              break;
+          }
+      }
+      return count;
+    }
+      
+}
