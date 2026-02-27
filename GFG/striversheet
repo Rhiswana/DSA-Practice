@@ -204,3 +204,82 @@ class Solution {
     }
 }
 
+//count digits
+
+// User function Template for Java
+
+class Solution {
+    static int evenlyDivides(int n) {
+        // code here
+        int count =0;
+    
+        int num =n;
+        int temp=n;
+        while(temp>0){
+           int divide=temp%10;
+           if(divide!=0 && num%divide==0){
+               count++;
+           }
+           
+               temp=temp/10;
+           
+           
+        }
+        return count;
+    }
+}
+//count digits only in num
+
+class Solution {
+    public static int countDigits(int n) {
+        // Code here
+        int temp=n;
+        int count=0;
+        while(temp>0){
+              count++;
+            
+            temp=temp/10;
+        }
+        return count;
+    }
+}
+
+//rev digits
+
+// User function Template for Java
+
+class Solution {
+    public int reverseDigits(int n) {
+        // Code here
+        int rev=0;
+        int temp=n;
+        while(temp>0){
+            int ld=temp%10;
+            if(ld!=0){
+             rev=rev*10+ld;
+        }
+          temp=temp/10;
+    }
+    return rev;
+    }
+}
+
+//palindrome 
+
+class Solution {
+    boolean isPalindrome(String s) {
+        // code here
+     int start =0;
+     int end = s.length()-1;
+     while(start<end){
+          if(s.charAt(start) != s.charAt(end)){
+              return false;
+              
+          }
+          start++;
+          end--;
+     }
+     return true;
+    }
+}
+
