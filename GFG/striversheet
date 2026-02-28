@@ -282,4 +282,58 @@ class Solution {
      return true;
     }
 }
+//armstrg no
 
+ for(int i=5;i*i<=n;i+=6){
+            if(n%i==0 || n%(i+2)==0){
+                return false;
+            }
+        }
+
+
+        //div of n
+
+        class Solution {
+    public static void print_divisors(int n) {
+        // code here
+        int i=1;
+       for( i=1;i*i<n;i++){
+            if(n%i==0){
+                System.out.print(i+" ");
+            }
+        }
+         if(i*i==n){
+             System.out.print(i+" ");
+             
+         }
+         for(i-=1;i>=1;i--){
+             if(n%i==0){
+                 
+             
+             System.out.print(n/i+" ");
+         } }
+    }
+}
+//prime no
+
+class Solution {
+    static boolean isPrime(int n) {
+        // code here
+        if(n==1){
+            return false;
+        }
+        if(n==2 || n==3){
+            return true;
+        }
+        if(n%2==0 || n%3==0){
+            return false;
+        }
+        for(int i=5;i*i<=n;i+=6){
+            if(n%i==0 || n%(i+2)==0){
+                return false;
+            }
+        }
+    
+    return true;
+    }
+}
