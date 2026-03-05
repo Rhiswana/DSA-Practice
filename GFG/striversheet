@@ -415,3 +415,29 @@ class Solution {
     }
 }
 
+//lon subarr with 0 sum
+
+class Solution {
+    int maxLength(int arr[]) {
+       
+        int maxLen =0;
+        int sum=0;
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            sum+=arr[i];
+            if(sum==0){
+                maxLen=i+1;
+                
+            }
+            else{
+                if(map.containsKey(sum)){
+                    maxLen =Math.max(maxLen,i-map.get(sum));
+                }
+                if(!map.containsKey(sum)){
+                    map.put(sum,i);
+                }
+            }
+        }
+        return maxLen;
+    }
+}
