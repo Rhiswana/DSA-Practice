@@ -27,6 +27,7 @@
             int liked =(shared/2);
             cummulative += liked;
             shared = liked*3;
+        
         }
         return cummulative;
         
