@@ -35,3 +35,47 @@
     }
 
 }
+
+    public static void separateNumbers(String s) {
+    // Write your code here
+                    boolean found=false;
+                  if(s.charAt(0)=='0'){
+                       System.out.println("NO");
+                        return;
+                      
+                  }
+                  for(int i=1;i<=s.length()/2;i++){
+                      
+                   String compare="";
+                  long num = Long.parseLong(s.substring(0,i));
+                     
+                  while(compare.length()<s.length()){
+                 
+                 
+                      
+                      compare +=num;
+                       num +=1;
+                      if(!s.startsWith(compare)){
+                      break;
+                  }
+                  }
+                   if(compare.equals(s)){
+                       found=true;
+                        System.out.println("YES "+s.substring(0,i));
+                       break;
+                   }
+              
+                   
+                      
+              }
+          if(found==false){
+              System.out.println("NO");
+              
+          }
+                
+        
+                  
+        
+    }
+
+}
