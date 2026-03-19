@@ -79,3 +79,18 @@
     }
 
 }
+
+   // Write your code here
+         int palindrome =0;
+        int low=0;
+        int high =s.length()-1;
+        while(low<high){
+            int diff=Math.abs(s.charAt(low)-s.charAt(high));
+            palindrome +=diff;
+            low++;
+            high--;
+        }
+        return palindrome;
+    }
+
+}
