@@ -94,3 +94,27 @@
     }
 
 }
+
+//maxperitri
+
+
+    public static List<Integer> maximumPerimeterTriangle(List<Integer> sticks) {
+    // Write your code here
+         Collections.sort(sticks);
+           ArrayList<Integer> list = new ArrayList<>();
+        for(int i=sticks.size()-2;i>=1;i--){
+            int a=sticks.get(i-1);
+            int b=sticks.get(i);
+            int c=sticks.get(i+1);
+            if(a+b>c && b+c>a && a+c>b){
+               
+                    
+                     list.add(a);
+                     list.add(b);
+                     list.add(c);
+                  break;
+                
+            }
+        }
+        return list.size()==3?list:Arrays.asList(-1);
+    
