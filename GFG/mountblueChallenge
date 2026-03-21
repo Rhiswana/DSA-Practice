@@ -116,5 +116,5 @@
                 
             }
         }
-        return list.size()==3?list:Arrays.asList(-1);
+        return list.size()==3?list:Arrays.asList(-1)
     
