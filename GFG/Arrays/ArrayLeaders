@@ -1,7 +1,7 @@
 class Solution {
     static ArrayList<Integer> leaders(int arr[]) {
         // code here
-        ArrayList<Integer> leaders = new ArrayList<>();
+        ArrayList<Integer> leaders = new ArrayList<>()
            int max = arr[arr.length-1];
             leaders.add(arr[arr.length-1]);
        for(int i=arr.length-2;i>=0;i--){
