@@ -5,7 +5,10 @@ class Solution:
         for i in arr:
             if max<i:
                 max=i
+
+        
         return max
+        
             
     
         
